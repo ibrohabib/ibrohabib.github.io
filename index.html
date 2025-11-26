@@ -3,412 +3,352 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Developer Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>My Portfolio</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
-        
+
         body {
-            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
-            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-        
-        .logo {
-            font-size: 24px;
-            font-weight: 700;
-            color: #1a2a6c;
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: #1a2a6c;
-        }
-        
-        .hero {
-            padding: 150px 0 100px;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
-        }
-        
-        .hero p {
-            font-size: 20px;
-            max-width: 700px;
-            margin: 0 auto 30px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background: #1a2a6c;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid #1a2a6c;
-        }
-        
-        .btn:hover {
-            background: transparent;
-            color: white;
-            border-color: white;
-        }
-        
-        .section {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            color: #1a2a6c;
-        }
-        
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .skill-card {
-            background: #f9f9f9;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
-        
-        .skill-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .skill-icon {
-            font-size: 40px;
-            color: #1a2a6c;
-            margin-bottom: 20px;
-        }
-        
-        .skill-card h3 {
-            margin-bottom: 15px;
-            color: #1a2a6c;
-        }
-        
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .project-card {
-            background: #f9f9f9;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .project-img {
-            height: 200px;
-            background: #1a2a6c;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 24px;
-        }
-        
-        .project-content {
+            color: #2c3e50;
+            background: #f8f9fa;
             padding: 20px;
         }
-        
-        .project-content h3 {
-            margin-bottom: 10px;
-            color: #1a2a6c;
-        }
-        
-        .contact {
-            background: #1a2a6c;
-            color: white;
-            text-align: center;
-        }
-        
-        .contact .section-title {
-            color: white;
-        }
-        
-        .contact-info {
-            max-width: 600px;
+
+        .container {
+            max-width: 900px;
             margin: 0 auto;
-        }
-        
-        .contact-info p {
-            margin-bottom: 20px;
-            font-size: 18px;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-top: 30px;
-        }
-        
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 50px;
-            height: 50px;
             background: white;
-            color: #1a2a6c;
-            border-radius: 50%;
-            margin: 0 10px;
-            font-size: 20px;
-            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
-        .social-links a:hover {
-            transform: translateY(-5px);
-            background: #fdbb2d;
+
+        header {
+            background: #2563eb;
             color: white;
-        }
-        
-        footer {
-            background: #0d1b4d;
-            color: white;
+            padding: 60px 40px;
             text-align: center;
-            padding: 20px 0;
         }
-        
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        header p {
+            font-size: 1.1em;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        .section h2 {
+            color: #2563eb;
+            font-size: 1.8em;
+            margin-bottom: 25px;
+            font-weight: 400;
+            letter-spacing: 0.5px;
+        }
+
+        .profile-text {
+            font-size: 1em;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+            font-weight: 500;
+            font-size: 0.95em;
+        }
+
+        td {
+            color: #4b5563;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tbody tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        h3 {
+            margin-top: 35px;
+            margin-bottom: 15px;
+            color: #2563eb;
+            font-size: 1.3em;
+            font-weight: 400;
+        }
+
+        footer {
+            background: #1e293b;
+            color: #e2e8f0;
+            text-align: center;
+            padding: 30px;
+        }
+
+        footer p {
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+
         @media (max-width: 768px) {
-            .navbar {
-                flex-direction: column;
+            header {
+                padding: 40px 20px;
             }
-            
-            .nav-links {
-                margin-top: 20px;
+
+            header h1 {
+                font-size: 2em;
             }
-            
-            .nav-links li {
-                margin: 0 10px;
+
+            .content {
+                padding: 30px 20px;
             }
-            
-            .hero h1 {
-                font-size: 36px;
+
+            table {
+                font-size: 0.9em;
             }
-            
-            .hero p {
-                font-size: 18px;
+
+            th, td {
+                padding: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav class="navbar">
-                <div class="logo">DevPortfolio</div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <div class="container">
+        <header>
+            <h1>Ibrohim Habiburrohman</h1>
+            <p>Programmer & Software Developer</p>
+        </header>
 
-    <section class="hero">
-        <div class="container">
-            <h1>Full Stack Developer</h1>
-            <p>I'm a passionate programmer with expertise in Flutter, CodeIgniter, and Node.js. I create efficient, scalable, and user-friendly applications.</p>
-            <a href="#contact" class="btn">Get In Touch</a>
-        </div>
-    </section>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <p style="font-size: 18px; margin-bottom: 20px;">
-                    I'm a dedicated software developer with several years of experience building web and mobile applications. My journey in programming started with a curiosity about how technology works, and it has evolved into a passion for creating solutions that make a difference.
+        <div class="content">
+            <!-- Profile Section -->
+            <section class="section">
+                <h2>Profile</h2>
+                <p class="profile-text">
+                    As a passionate and dedicated programmer, I am eager to contribute my skills in software development and problem-solving to your dynamic team. With a strong foundation in various programming languages and a commitment to continuous learning, I am excited about the opportunity to collaborate on innovative projects that drive success. I believe my enthusiasm and technical expertise will make a positive impact, and I am ready to help elevate your team's performance to new heights.
                 </p>
-                <p style="font-size: 18px;">
-                    I specialize in cross-platform mobile development with Flutter, robust backend systems with Node.js, and dynamic web applications with CodeIgniter. I enjoy tackling complex problems and turning ideas into functional, elegant software.
-                </p>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">My Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-flutter"></i>
-                    </div>
-                    <h3>Flutter Development</h3>
-                    <p>Building beautiful, high-performance cross-platform mobile applications for iOS and Android using Flutter and Dart.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>CodeIgniter</h3>
-                    <p>Developing robust and scalable web applications using the CodeIgniter PHP framework with MVC architecture.</p>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">
-                        <i class="fab fa-node-js"></i>
-                    </div>
-                    <h3>Node.js</h3>
-                    <p>Creating efficient server-side applications and APIs using Node.js, Express, and various database technologies.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Skills Section -->
+            <section class="section">
+                <h2>Skills</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Technology</th>
+                            <th>Category</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Flutter</td>
+                            <td>Mobile Apps</td>
+                        </tr>
+                        <tr>
+                            <td>Laravel</td>
+                            <td>Web Framework</td>
+                        </tr>
+                        <tr>
+                            <td>Code Igniter</td>
+                            <td>Web Framework</td>
+                        </tr>
+                        <tr>
+                            <td>ExpressJS</td>
+                            <td>Backend Framework</td>
+                        </tr>
+                        <tr>
+                            <td>Node.js</td>
+                            <td>Backend Framework</td>
+                        </tr>
+                        <tr>
+                            <td>Golang</td>
+                            <td>Backend Framework</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-img">Flutter App</div>
-                    <div class="project-content">
-                        <h3>E-Commerce Mobile App</h3>
-                        <p>A full-featured e-commerce application built with Flutter, featuring product catalog, shopping cart, and payment integration.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">CodeIgniter</div>
-                    <div class="project-content">
-                        <h3>Content Management System</h3>
-                        <p>A custom CMS built with CodeIgniter for managing website content, users, and media with an intuitive admin interface.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-img">Node.js</div>
-                    <div class="project-content">
-                        <h3>RESTful API Service</h3>
-                        <p>A scalable REST API built with Node.js and Express, providing data services for multiple client applications.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Experience Section -->
+            <section class="section">
+                <h2>Work Experience</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Programmer</td>
+                            <td>Phicos Cipta Media</td>
+                            <td>Oct 2020 – Current</td>
+                        </tr>
+                    </tbody>
+                </table>
 
-    <section id="contact" class="section contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-info">
-                <p>I'm always open to discussing new opportunities and interesting projects.</p>
-                <p>Feel free to reach out if you'd like to work together or just say hello!</p>
-                <p>Email: hello@devportfolio.com</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-github"></i></a>
-                    <a href="#"><i class="fab fa-linkedin"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+                <h3>Key Responsibilities</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Responsibility</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Developed and maintained web applications using HTML, CSS, JavaScript, React, ExpressJS, Node.js, and Golang</td>
+                        </tr>
+                        <tr>
+                            <td>Built and optimized mobile applications with Flutter and Java/Kotlin</td>
+                        </tr>
+                        <tr>
+                            <td>Designed and implemented RESTful APIs to connect front-end and back-end systems</td>
+                        </tr>
+                        <tr>
+                            <td>Integrated Sunmi Kiosk devices with mobile apps using a hybrid Kotlin and Flutter approach</td>
+                        </tr>
+                        <tr>
+                            <td>Managed databases, including MySQL, PostgreSQL, and SQL Server, to ensure data integrity and performance</td>
+                        </tr>
+                        <tr>
+                            <td>Containerized app with Docker and implemented Redis caching, boosting performance and ensuring environment consistency</td>
+                        </tr>
+                        <tr>
+                            <td>Used Git for version control to support continuous integration and deployment (CI/CD)</td>
+                        </tr>
+                        <tr>
+                            <td>Collaborated with cross-functional teams to gather requirements, design solutions, and deliver software on schedule</td>
+                        </tr>
+                        <tr>
+                            <td>Implemented Elasticsearch to handle product search with full-text capabilities</td>
+                        </tr>
+                        <tr>
+                            <td>Integrated Keycloak as centralized authentication service, implementing OAuth 2.0</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 DevPortfolio. All rights reserved.</p>
-        </div>
-    </footer>
+            <!-- Education Section -->
+            <section class="section">
+                <h2>Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>S1 Informatika (Bachelor of Informatics)</td>
+                            <td>Universitas Sebelas Maret</td>
+                            <td>2015 – 2022</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if(targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if(targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add active class to navigation links on scroll
-        window.addEventListener('scroll', function() {
-            const sections = document.querySelectorAll('section');
-            const navLinks = document.querySelectorAll('.nav-links a');
-            
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if(pageYOffset >= (sectionTop - 100)) {
-                    current = section.getAttribute('id');
-                }
-            });
-            
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if(link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
-            });
-        });
-    </script>
+            <!-- Projects/Portfolio Section (Empty for you to fill) -->
+            <section class="section">
+                <h2>Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Description</th>
+                            <th>Technologies</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Tauval SPBE - Backend</td>
+                            <td>Application to manage instrument in specific city, with full report. I work supporting in the backend side with golang.</td>
+                            <td>Golang, MySQL</td>
+                            <td><a href="https://tauval-spbe.vercel.app" target="_blank">Web</a></td>
+                        </tr>
+                        <tr>
+                            <td>Peruri Kinerjaku - Full Stack</td>
+                            <td>System for evaluation of Individual Performnace of every employee that using microservices </td>
+                            <td>Laravel, Docker, SQL Server</td>
+                            <td><a href="https://kinerjaku.peruri.co.id/" target="_blank">Web (only in Peruri Network / using VPN)</a></td>
+                        </tr>
+                        <tr>
+                            <td>Peruri - SSO</td>
+                            <td>System SSO using Keycloak, with the data is injected using Node.js from many database to get users & role to automate the insertion with the API. The SSO then implemented in a Portal which can open many websites.</td>
+                            <td>Keycloak, Node.js, SQL Server, MySQL, PostgreSQL</td>
+                            <td><a href="https://ava.peruri.co.id/" target="_blank">Web</a><br><a href="https://portal.peruri.co.id/portal/" target="_blank">Portal</a></td>
+                        </tr>
+                        <tr>
+                            <td>Profil Belajar Siswa - Mobile</td>
+                            <td>Mobile Application for initial assessment of Students with Disabilities</td>
+                            <td>Flutter</td>
+                            <td><a href="https://play.google.com/store/apps/details?id=id.go.inovasi.pbs" target="_blank">Mobile</a></td>
+                        </tr>
+                        <tr>
+                            <td>Manajemen Video - Full Stack</td>
+                            <td>Web Application for Manajement of Education Video Production about KSPS Tendik, with NextCloud integration for video storage, and Google Drive of document storage (so that user can comment the document online)</td>
+                            <td>Laravel, MySQL, NextCloud, Google Drive</td>
+                            <td><a href="https://play.google.com/store/apps/details?id=id.go.inovasi.pbs" target="_blank">Web</a></td>
+                        </tr>
+                        <tr>
+                            <td>Ujilab DPUPR Boyolali - Mobile</td>
+                            <td>Mobile Application that use WebView, and custom it with Firebase to trigger notification in mobile</td>
+                            <td>Flutter</td>
+                            <td><a href="https://lantarciptamedia.co.id/boyolali/ujilab-dpupr/" target="_blank">Web (the mobile didnt uploaded to playstore)</a></td>
+                        </tr>
+                        <tr>
+                            <td>Employee Self Service (ESS) - Mobile</td>
+                            <td>Mobile Application for centered service of all employee in Peruri, which include overtime, agenda, official travel, etc.</td>
+                            <td>Flutter</td>
+                            <td><a href="https://play.google.com/store/apps/details?id=com.peruri.ess_peruri_mobile&hl=id" target="_blank">Play Store</a><br><a href="https://apps.apple.com/id/app/peruri-connect/id1544697049" target="_blank">App Store</a></td>
+                        </tr>
+                        <tr>
+                            <td>Dolan - Web</td>
+                            <td>Ticketing Application online and offline using KIOSK devices, with dashboard web admin panel for merchant to custom products, with detailed report</td>
+                            <td>Flutter (Web Admin Panel, POS, and Kiosk), Strapi (based on NodeJS) for API, NextJS for Web Ticketing</td>
+                            <td><a href="https://dolanapp.com/" target="_blank">Ticketing</a><a href="https://merchant.dolanapp.com/" target="_blank">Admin Panel</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Ibrohim Habiburrohman. All rights reserved.</p>
+            <p>Contact: hibrohim@gmail.com | GitHub: github.com/ibrohabib</p>
+        </footer>
+    </div>
 </body>
 </html>
