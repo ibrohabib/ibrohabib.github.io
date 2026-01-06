@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ibrohim Habiburrohman – Resume</title>
+
+    <!-- Google Font similar to TemplateMo Composite -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #1abc9c;
+            --dark: #111827;
+            --darker: #020617;
+            --light: #e5e7eb;
+            --muted: #9ca3af;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: var(--dark);
+            color: var(--light);
+            line-height: 1.7;
+        }
+
+        /* ===== Layout ===== */
+        .wrapper {
+            display: flex;
+            max-width: 1600px;
+            margin: 40px auto;
+            background: var(--darker);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .6);
+        }
+
+        /* ===== Sidebar ===== */
+        .sidebar {
+            width: 30%;
+            background: #0b1220;
+            padding: 50px 35px;
+        }
+
+        .sidebar h1 {
+            font-size: 1.9rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .sidebar .role {
+            color: var(--primary);
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+
+        .sidebar h3 {
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .sidebar p,
+        .sidebar li {
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar ul li {
+            margin-bottom: 8px;
+        }
+
+        /* ===== Main Content ===== */
+        .main {
+            width: 70%;
+            padding: 60px;
+        }
+
+        .section {
+            margin-bottom: 60px;
+        }
+
+        .section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+        }
+
+        .section h2::after {
+            content: "";
+            width: 50px;
+            height: 3px;
+            background: var(--primary);
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+        }
+
+        .section p {
+            color: #d1d5db;
+            font-size: 0.95rem;
+        }
+
+        /* ===== Tables ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 25px;
+        }
+
+        th {
+            text-align: left;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            color: var(--primary);
+            padding-bottom: 10px;
+        }
+
+        td {
+            padding: 12px 4px;
+            border-bottom: 1px solid #1f2937;
+            font-size: 0.9rem;
+            color: #d1d5db;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ===== Footer ===== */
+        .footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 0.85rem;
+            color: var(--muted);
+            border-top: 1px solid #1f2937;
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 900px) {
+            .wrapper {
+                flex-direction: column;
+            }
+
+            .sidebar,
+            .main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h1>Ibrohim Habiburrohman</h1>
+            <div class="role">Mobile & Full Stack Developer</div>
+
+            <h3>CONTACT</h3>
+            <p>Email: hibrohim@gmail.com</p>
+            <p>GitHub: github.com/ibrohabib</p>
+
+            <br>
+
+            <h3>SKILLS</h3>
+            <ul>
+                <li>Flutter / Android</li>
+                <li>Laravel / CodeIgniter</li>
+                <li>Node.js / ExpressJS</li>
+                <li>MySQL, PostgreSQL, SQL Server</li>
+                <li>Docker, Redis, Elasticsearch</li>
+            </ul>
+        </aside>
+
+        <!-- MAIN -->
+        <main class="main">
+
+            <section class="section">
+                <h2>Profile</h2>
+                <p>
+                    Full Stack Developer with 5+ years of experience and involvement in 50+ projects across web and
+                    mobile platforms.
+                    Skilled in HTML, CSS, JavaScript, React, Node.js, ExpressJS, and Flutter (Java/Kotlin).
+                    Experienced in building RESTful APIs, Sunmi Kiosk integrations, and OAuth 2.0 authentication with
+                    Keycloak.
+                    Proficient in MySQL, PostgreSQL, SQL Server, Docker, Redis, and Elasticsearch.
+                    Strong collaborator supporting CI/CD workflows and delivering scalable solutions on time.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2>Work Experience</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Position</th>
+                            <th>Company</th>
+                            <th>Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mobile Developer</td>
+                            <td>Phicos Cipta Media</td>
+                            <td>Oct 2020 – Nov 2022</td>
+                        </tr>
+                        <tr>
+                            <td>Full Stack Developer</td>
+                            <td>Phicos Cipta Media</td>
+                            <td>Nov 2022 – Dec 2025</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>Education</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Degree</th>
+                            <th>Institution</th>
+                            <th>Period</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bachelor of Informatics</td>
+                            <td>Universitas Sebelas Maret</td>
+                            <td>2015 – 2022</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="section">
+                <h2>Projects</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Description</th>
+                            <th>Tech</th>
+                            <th>Link</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <tr>
+                            <td>Peruri Kinerjaku</td>
+                            <td>Employee performance evaluation system using microservices architecture.</td>
+                            <td>Laravel, Docker, SQL Server</td>
+                            <td><a href="https://kinerjaku.peruri.co.id/" target="_blank">Web (VPN)</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Peruri SSO</td>
+                            <td>Centralized SSO using Keycloak with automated user & role injection from multiple
+                                databases.</td>
+                            <td>Keycloak, Node.js, MySQL, PostgreSQL, SQL Server</td>
+                            <td>
+                                <a href="https://ava.peruri.co.id/" target="_blank">SSO</a><br>
+                                <a href="https://portal.peruri.co.id/portal/" target="_blank">Portal</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Profil Belajar Siswa</td>
+                            <td>Mobile application for initial assessment of students with disabilities.</td>
+                            <td>Flutter</td>
+                            <td><a href="https://play.google.com/store/apps/details?id=id.go.inovasi.pbs"
+                                    target="_blank">Play Store</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Manajemen Video</td>
+                            <td>Education video management platform with NextCloud & Google Drive integration.</td>
+                            <td>Laravel, MySQL, NextCloud, Google Drive</td>
+                            <td><a href="https://play.google.com/store/apps/details?id=id.go.inovasi.pbs"
+                                    target="_blank">Web</a></td>
+                        </tr>
+
+                        <tr>
+                            <td>Ujilab DPUPR Boyolali</td>
+                            <td>WebView-based mobile app with Firebase push notification integration.</td>
+                            <td>Flutter, Firebase</td>
+                            <td><a href="https://lantarciptamedia.co.id/boyolali/ujilab-dpupr/" target="_blank">Web (mobile app not available on Play Store)</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Employee Self Service (ESS)</td>
+                            <td>Enterprise mobile app for employee services including overtime, agenda, and official
+                                travel.</td>
+                            <td>Flutter</td>
+                            <td>
+                                <a href="https://play.google.com/store/apps/details?id=com.peruri.ess_peruri_mobile"
+                                    target="_blank">Play Store</a><br>
+                                <a href="https://apps.apple.com/id/app/peruri-connect/id1544697049" target="_blank">App
+                                    Store</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Dolan</td>
+                            <td>Online & offline ticketing system with kiosk devices and merchant admin dashboard.</td>
+                            <td>Flutter, Strapi, Next.js</td>
+                            <td>
+                                <a href="https://dolanapp.com/" target="_blank">Ticketing</a><br>
+                                <a href="https://merchant.dolanapp.com/" target="_blank">Admin Panel</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <div class="footer">
+        © 2025 Ibrohim Habiburrohman
+    </div>
+
+</body>
+
+</html>
